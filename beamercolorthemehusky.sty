@@ -1,0 +1,216 @@
+%
+% This document provides on-brand styling for presentations according to the
+% Michigan Technological University brand guide.
+
+\mode<presentation>
+
+% Primary Palette Colors
+\definecolor {mtu@gold}       {RGB}{255,206,000}
+\definecolor {mtu@black}      {RGB}{000,000,000}
+
+% Secondary Palette Colors
+\definecolor {mtu@robinsegg}  {RGB}{000,191,214}
+\definecolor {mtu@allports}   {RGB}{000,129,152}
+\definecolor {mtu@sushi}      {RGB}{108,164,057}
+\definecolor {mtu@keyLime}    {RGB}{193,205,035}
+\definecolor {mtu@vermillion} {RGB}{255,070,018}
+\definecolor {mtu@amaranth}   {RGB}{238,037,092}
+\definecolor {mtu@oslo}       {RGB}{138,140,140}
+\definecolor {mtu@hibiscus}   {RGB}{164,034,119}
+
+%
+\setbeamercolor {normal text}     {fg=mtu@black, bg=white}
+\setbeamercolor {alerted text}    {fg=mtu@allports}
+\setbeamercolor {example text}    {fg=mtu@sushi}
+
+%
+\setbeamercolor {structure} {fg=mtu@black}
+
+%
+\setbeamercolor {background canvas} {parent=normal text}
+\setbeamercolor {background}        {parent=background canvas}
+
+%
+\setbeamercolor {palette primary}    {use=normal text,fg=normal text.fg}
+\setbeamercolor {palette secondary}  {use=structure,fg=structure.fg}
+\setbeamercolor {palette tertiary}   {use=normal text,fg=normal text.fg}
+\setbeamercolor {palette quaternary} {fg=mtu@black}
+
+%
+\setbeamercolor {palette sidebar primary}    {use=normal text,fg=normal text.fg}
+\setbeamercolor {palette sidebar secondary}  {use=structure,fg=structure.fg}
+\setbeamercolor {palette sidebar tertiary}   {use=normal text,fg=normal text.fg}
+\setbeamercolor {palette sidebar quaternary} {use=structure,fg=structure.fg}
+
+%
+\setbeamercolor {math text}           {}
+\setbeamercolor {math text displayed} {parent=math text}
+\setbeamercolor {math text inlined}   {parent=math text}
+
+%
+\setbeamercolor {normal text in math text} {}
+
+%
+\setbeamercolor {local structure} {parent=structure}
+
+%
+\setbeamercolor {titlelike} {parent=structure}
+
+%
+\setbeamercolor {title}              {parent=titlelike}
+\setbeamercolor {title in head/foot} {parent=palette quaternary}
+\setbeamercolor {title in sidebar}   {parent=palette sidebar quaternary}
+
+%
+\setbeamercolor {subtitle} {parent=title}
+
+%
+\setbeamercolor {author}              {}
+\setbeamercolor {author in head/foot} {parent=palette primary}
+\setbeamercolor {author in sidebar}   {use=palette sidebar tertiary,fg=palette sidebar tertiary.fg}
+
+%
+\setbeamercolor {institute}              {}
+\setbeamercolor {institute in head/foot} {parent=palette tertiary}
+\setbeamercolor {institute in sidebar}   {use=palettesidebar tertiary,fg=palette sidebar tertiary.fg}
+
+%
+\setbeamercolor {date}              {}
+\setbeamercolor {date in head/foot} {parent=palette secondary}
+\setbeamercolor {date in sidebar}   {use=palette sidebar tertiary,fg=palette sidebar tertiary.fg}
+
+%
+\setbeamercolor {titlegraphic} {}
+
+%
+\setbeamercolor {part name}  {}
+\setbeamercolor {part title} {parent=titlelike}
+
+%
+\setbeamercolor {section name}  {}
+\setbeamercolor {section title} {parent=titlelike}
+
+%
+\setbeamercolor {section in toc}            {parent=structure}
+\setbeamercolor {section in toc shaded}     {parent=section in toc}
+\setbeamercolor {section in head/foot}      {parent=palette tertiary}
+\setbeamercolor {section in sidebar}        {parent=palette sidebar secondary}
+\setbeamercolor {section in sidebar shaded} {use=section in sidebar,fg=section in sidebar.fg!40!bg}
+\setbeamercolor {section number projected}  {parent=item projected}
+
+%
+\setbeamercolor {subsection name}  {}
+\setbeamercolor {subsection title} {parent=titlelike}
+
+%
+\setbeamercolor {subsection in toc}            {}
+\setbeamercolor {subsection in toc shaded}     {parent=subsection in toc}
+\setbeamercolor {subsection in head/foot}      {parent=palette secondary}
+\setbeamercolor {subsection in sidebar}        {parent=palette sidebar primary}
+\setbeamercolor {subsection in sidebar shaded} {use=subsection in sidebar,fg=subsection in sidebar.fg!40!bg}
+\setbeamercolor {subsection number projected}  {parent=subitem projected}
+
+%
+\setbeamercolor {subsubsection name}  {}
+\setbeamercolor {subsubsection title} {parent=titlelike}
+
+%
+\setbeamercolor {subsubsection in toc}            {parent=subsection in toc}
+\setbeamercolor {subsubsection in toc shaded}     {parent=subsubsection in toc}
+\setbeamercolor {subsubsection in head/foot}      {parent=subsection in head/foot}
+\setbeamercolor {subsubsection in sidebar}        {parent=subsection in sidebar}
+\setbeamercolor {subsubsection in sidebar shaded} {parent=subsection in sidebar shaded}
+\setbeamercolor {subsubsection number projected}  {parent=subsubitem projected}
+
+\setbeamercolor{headline}{}
+\setbeamercolor{footline}{}
+
+\setbeamercolor{sidebar}{}
+\setbeamercolor{sidebar left}{parent=sidebar}
+\setbeamercolor{sidebar right}{parent=sidebar}
+
+\setbeamercolor{logo}{parent=palette secondary}
+
+\setbeamercolor{frametitle}{parent=titlelike}
+\setbeamercolor{framesubtitle}{parent=frametitle}
+
+\setbeamercolor{frametitle right}{parent=frametitle}
+
+\setbeamercolor{caption}{}
+\setbeamercolor{caption name}{parent=structure}
+
+\setbeamercolor{button}{use=local structure,bg=local structure.fg!50!bg,fg=white}
+\setbeamercolor{button border}{use=button,fg=button.bg}
+\setbeamercolor{navigation symbols}{use=structure,fg=structure.fg!40!bg}
+\setbeamercolor{navigation symbols dimmed}{use=structure,fg=structure.fg!20!bg}
+\setbeamercolor{mini frame}{parent=section in head/foot}
+
+\setbeamercolor{block body}{}
+\setbeamercolor{block body alerted}{}
+\setbeamercolor{block body example}{}
+\setbeamercolor{block title}{parent=structure}
+\setbeamercolor{block title alerted}{parent=alerted text}
+\setbeamercolor{block title example}{parent=example text}
+
+\setbeamercolor{item}{parent=local structure,fg=mtu@gold}
+\setbeamercolor{subitem}{parent=item}
+\setbeamercolor{subsubitem}{parent=subitem}
+
+\setbeamercolor{item projected}{parent=item,use=item,fg=white,bg=item.fg}
+\setbeamercolor{subitem projected}{parent=item projected}
+\setbeamercolor{subsubitem projected}{parent=subitem projected}
+
+\setbeamercolor{enumerate item}{parent=item}
+\setbeamercolor{enumerate subitem}{parent=subitem}
+\setbeamercolor{enumerate subsubitem}{parent=subsubitem}
+
+\setbeamercolor{description item}{parent=item,fg=mtu@black}
+\setbeamercolor{description subitem}{parent=description item}
+\setbeamercolor{description subsubitem}{parent=description subitem}
+
+\setbeamercolor{itemize item}{parent=item}
+\setbeamercolor{itemize subitem}{parent=subitem}
+\setbeamercolor{itemize subsubitem}{parent=subsubitem}
+
+\setbeamercolor{itemize/enumerate body}{}
+\setbeamercolor{itemize/enumerate subbody}{}
+\setbeamercolor{itemize/enumerate subsubbody}{}
+
+\setbeamercolor{description item}{parent=item}
+
+\setbeamercolor{description body}{}
+
+\setbeamercolor{bibliography item}{parent=item}
+
+\setbeamercolor{bibliography entry author}{use=structure,fg=structure.fg}
+\setbeamercolor{bibliography entry title}{use=normal text,fg=normal text.fg}
+\setbeamercolor{bibliography entry location}{use=structure,fg=structure.fg!65!bg}
+\setbeamercolor{bibliography entry note}{use=structure,fg=structure.fg!65!bg}
+
+\setbeamercolor{separation line}{}
+
+\setbeamercolor{upper separation line head}{parent=separation line}
+\setbeamercolor{middle separation line head}{parent=separation line}
+\setbeamercolor{lower separation line head}{parent=separation line}
+
+\setbeamercolor{upper separation line foot}{parent=separation line}
+\setbeamercolor{middle separation line foot}{parent=separation line}
+\setbeamercolor{lower separation line foot}{parent=separation line}
+
+\setbeamercolor{abstract}{}
+\setbeamercolor{abstract title}{parent=structure}
+
+\setbeamercolor{verse}{}
+
+\setbeamercolor{quotation}{}
+\setbeamercolor{quote}{parent=quotation}
+
+\setbeamercolor{page number in head/foot}{parent=palette secondary}
+
+\setbeamercolor{qed symbol}{parent=structure}
+
+\setbeamercolor{note page}{bg=white!90!black, fg=black}
+\setbeamercolor{note title}{bg=white!80!black, fg=black}
+\setbeamercolor{note date}{parent=note title}
+
+\mode<all>

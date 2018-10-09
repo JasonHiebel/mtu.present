@@ -1,0 +1,102 @@
+% by Jason Hiebel <jshiebel@mtu.edu>
+%
+
+\newif\ifHoughton@gold\Houghton@goldfalse
+\DeclareOptionBeamer{gold}{\Houghton@goldtrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+\useinnertheme {default}
+\useoutertheme {default}
+\usefonttheme  {structurebold}
+\usecolortheme {husky}
+
+\usepackage[scaled]{helvet}
+\DeclareTextFontCommand{\emph}{\bfseries}
+
+\setbeamertemplate{bibliography item}[text]
+\setbeamertemplate{sidebar left }{}
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamersize{sidebar width left=0.06875\paperwidth, sidebar width right=0.06875\paperwidth}
+\setbeamersize{text margin left=0pt, text margin right=0pt}
+
+\setbeamercolor{date in head/foot}{parent=palette secondary,fg=mtu@black}
+\setbeamercolor{page number in head/foot}{parent=palette secondary,fg=mtu@black}
+
+\usepackage{adjustbox}
+
+\def\@listi{\leftmargin\leftmargini
+	\topsep  3\p@ \@plus2\p@ \@minus2.5\p@
+	\parsep  0\p@
+	\itemsep 10\p@ \@plus5\p@ \@minus2\p@}
+\let\@listI\@listi
+\def\@listii{\leftmargin\leftmarginii
+	\topsep  5\p@ \@plus1\p@ \@minus2\p@
+	\parsep  0\p@ \@plus\p@
+	\itemsep 5\p@ \@plus4\p@ \@minus2\p@}
+\def\@listiii{\leftmargin\leftmarginiii
+	\topsep    2\p@ \@plus1\p@ \@minus2\p@
+	\parsep    0\p@   \@plus\p@
+	\itemsep   \parsep}
+
+\setbeamertemplate{title page}{
+	\vbox{}\vfill
+	\begingroup
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center]{title}
+		\usebeamerfont{title}\inserttitle\par%
+		\ifx\insertsubtitle\@empty%
+		\else\vskip0.25em{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+		\fi%
+	\end{beamercolorbox}%
+	\vskip1em\par
+	\begin{beamercolorbox}[sep=8pt,center]{author}\usebeamerfont{author}\insertauthor\end{beamercolorbox}
+	\begin{beamercolorbox}[sep=8pt,center]{institute}\usebeamerfont{institute}\insertinstitute\end{beamercolorbox}
+	\begin{beamercolorbox}[sep=8pt,center]{date}\usebeamerfont{date}\insertdate\end{beamercolorbox}
+	\endgroup
+	\vfill}
+
+\setbeamertemplate{frametitle}{
+	\ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+	\@tempdima=\textwidth%
+	\advance\@tempdima by\beamer@leftmargin%
+	\advance\@tempdima by\beamer@rightmargin%
+	\begin{beamercolorbox}[sep=0cm,wd=\the\@tempdima]{frametitle}
+		\usebeamerfont{frametitle}%
+		\vbox{}\vskip1ex%
+		\strut\insertframetitle\strut\par{%
+		\ifx\insertframesubtitle\@empty%
+		\else{\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+		\fi}%
+	\end{beamercolorbox}}
+
+\ifHoughton@gold
+\setbeamercolor{footback}{fg=mtu@black,bg=mtu@gold}
+\fi
+
+\setbeamertemplate{footline}{%
+	\setbeamercolor{footlineseparator}{fg=white,bg=mtu@black}%
+	\ifHoughton@gold{}%
+	\else{%
+		\begin{beamercolorbox}[wd=1.0\paperwidth,center]{}%
+			\begin{beamercolorbox}[wd=0.8625\paperwidth,ht=0.1pt]{footlineseparator}\end{beamercolorbox}%
+		\end{beamercolorbox}}%
+	\fi
+	\leavevmode%
+	\begin{beamercolorbox}[wd=1.0\paperwidth,center,sep=2mm]{footback}
+		\begin{beamercolorbox}[wd=0.8625\paperwidth]{}%
+			\usebeamerfont{title in head/foot}
+			\insertshortauthor{}%
+			\hspace*{2em plus 0.5em minus 0.5em}%
+			\usebeamerfont{date in head/foot}
+			\insertshortdate{}%
+			\hfill
+			\usebeamerfont{pagenumber in head/foot}
+			\insertframenumber{}\enspace\rule[-0.4ex]{0.4pt}{2.0ex}\enspace\inserttotalframenumber{}%
+			\hspace*{2em plus 0.5em minus 0.5em}
+			\adjustbox{valign=c}{\resizebox*{!}{4ex}{\insertlogo}}
+		\end{beamercolorbox}
+	\end{beamercolorbox}
+}

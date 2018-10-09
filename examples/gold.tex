@@ -1,0 +1,66 @@
+\documentclass[mathserif]{beamer}
+\usetheme[gold]{Houghton}
+
+\usepackage[T1]{fontenc}
+\usepackage{concrete}
+
+\newcommand*{\emailstack}[2]{\shortstack{#1\strut\\\small\url{#2}\strut}}
+
+\title{Michigan Tech Styled Beamer Themes}
+\author[Hiebel and Hiebel]{\emailstack{\textbf{Jason Hiebel}}{jshiebel@mtu.edu} \and \emailstack{\textbf{Jason Hiebel}}{jshiebel@mtu.edu}}
+\institute[Michigan Tech]{Department of Computer Science\\Michigan Technological University}
+\date[Sept. 2018]{Sample Document Preparation\\September 2018}
+\logo{\adjustbox{raise=1ex}{\includegraphics{MichiganTech_Horizontal_OneColor_Black.png}}}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\begin{frame}{Beamer Theme: Houghton}
+\begin{itemize}
+\item<1-> professional looking fonts
+\item<2-> approved colors for web and publication by Michigan Tech
+\item<3-> simple, unobtrusive navigational information
+\item<4-> \emph{nice bullets}
+\end{itemize}
+\end{frame}
+
+\section{Behaviors}
+\subsection{Sum of Squares}
+\begin{frame}{Let's Prove Something}
+\only<1>{
+\begin{theorem}[Sum of Squares]
+For $n \geq 0$, \[ \sum^n_{i=1} i = \frac{n (n+1)}{2}. \]
+\end{theorem}
+}
+\only<2>{
+\begin{proof}
+\begin{description}[1in]
+\item[Basis:] For $n = 0$, \[ \sum^n_{i=1} i = 0 = \frac{n (n+1)}{2} \]
+\item[Recurrence:] Assume the result holds for $n$. Then for $n + 1$,
+\[ \sum^{n+1}_{i=1} i
+= (n+1) + \sum^n_{i=1} i
+= (n+1) + \frac{n(n+1)}{2}
+= \frac{(n+1)(n+2)}{2}.
+\]
+\end{description}
+\end{proof}
+}
+\end{frame}
+
+\subsection{Some Definitions}
+\begin{frame}{Some Definitions}
+\begin{definition}[Big-$\mathcal{O}$]
+A function $f(n)$ is asymptotically bounded below by function $g(n)$, i.e., $f \in \mathcal{O}(g)$, if for some $n_0$ and $c > 0$, $f(n) \geq c \cdot g(n)$ for all $n \geq n_0$.
+\end{definition}
+\begin{itemize}
+\item We say that $f$ is in Big-$\mathcal{O}$ of $g$, $f = \text{Big-}\mathcal{O}(g)$, or more rarely $f \in \text{Big-}\mathcal{O}(g)$; although I would argue that the last option is the most correct.
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}
+\begin{center}{\Large Thank You!}\end{center}
+\end{frame}
+
+\end{document}
