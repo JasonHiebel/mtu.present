@@ -31,7 +31,8 @@ The two theme variants work well in both 4:3 and 16:9 aspect ratios. Both are de
 \date[Sept. 2018]{
 	Sample Document Preparation\\
 	September 2018}
-\logo{\includegraphics{MichiganTech_Horizontal_TwoColor.png}}
+\logo{\includegraphics{
+	MichiganTech_Horizontal_TwoColor.png}}
 
 \begin{document}
 \maketitle
@@ -43,4 +44,4 @@ This example replicates the title cards illustrated above. The golden footline r
 
 Each of the standard title page elements are specified. The author specification uses the standard `\and` command for specifying multiple authors. To specify other author information, such as email, we can use the `shortstack` command (as illustrated by the `\emailstack` definition. The footline contains the short-form for both the author and date.
 
-Logos must be obtained from the UMC's [resources page](https://www.mtu.edu/umc/resources/download/index.html). The full color logo should be used with the standard layout, and the black logo should be used with the gold layout. The image format you use will depend on the latex compiler: pdflatex uses `png` files, latex uses `eps` files, etc. Other logos can also be provided. The logos should automatically
+Logos must be obtained from the UMC's [resources page](https://www.mtu.edu/umc/resources/download/index.html). The full color logo should be used with the standard layout, and the black logo should be used with the gold layout. The image format you use will depend on the latex compiler: pdflatex uses `png` files, latex uses `eps` files, etc. Other logos can also be provided. The logos should automatically be scaled to the correct height for the footline.
