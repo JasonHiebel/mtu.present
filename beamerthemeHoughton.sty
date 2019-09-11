@@ -94,9 +94,9 @@
 			\insertshortdate{}%
 			\hfill
 			\usebeamerfont{pagenumber in head/foot}
-			\insertframenumber{}\enspace\rule[-0.4ex]{0.4pt}{2.0ex}\enspace\inserttotalframenumber{}%
+			\ifbeamer@noframenumbering{}\else\insertframenumber{}\fi\enspace\rule[-0.4ex]{0.4pt}{2.0ex}\enspace\inserttotalframenumber{}%
 			\hspace*{2em plus 0.5em minus 0.5em}
-			\adjustbox{valign=c}{\resizebox*{!}{4ex}{\insertlogo}}
+			\insertlogo
 		\end{beamercolorbox}
 	\end{beamercolorbox}
 }
