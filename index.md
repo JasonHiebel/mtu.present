@@ -44,4 +44,11 @@ This example replicates the title cards illustrated above. The golden footline r
 
 Each of the standard title page elements are specified. The author specification uses the standard `\and` command for specifying multiple authors. To specify other author information, such as email, we can use the `shortstack` command (as illustrated by the `\emailstack` definition. The footline contains the short-form for both the author and date.
 
-Logos must be obtained from the UMC's [resources page](https://www.mtu.edu/umc/resources/download/index.html). The full color logo should be used with the standard layout, and the black logo should be used with the gold layout. The image format you use will depend on the latex compiler: pdflatex uses `png` files, latex uses `eps` files, etc. Other logos can also be provided. The logos should automatically be scaled to the correct height for the footline.
+Logos must be obtained from the UMC's [resources page](https://www.mtu.edu/umc/resources/download/index.html). The full color logo should be used with the standard layout, and the black logo should be used with the gold layout. The image format you use will depend on the latex compiler: pdflatex uses `png` files, latex uses `eps` files, etc. Other logos can also be provided.
+
+If you specify a logo, it will be rendered as-is. If the logo is rendering too large, you can use the `adjustbox` package to change the size and alignment of the logo at document compilation. This will likely be less effort than changing the image file directly. For example, the husky logo from UMC, and likewise the footline, will take up approximately half the vertical space of the slide. The following definition will rescale the image to a more reasonable size (as evidenced by the standard/gold example pdf's).
+
+```
+\usepackage{adjustbox}
+\logo{\adjustbox{valign=c}{\resizebox*{!}{4ex}{\includegraphics{HuskyIcon_OneColor_Black.png}}}}
+```
