@@ -50,5 +50,6 @@ If you specify a logo, it will be rendered as-is. If the logo is rendering too l
 
 ```
 \usepackage{adjustbox}
-\logo{\adjustbox{valign=c}{\resizebox*{!}{4ex}{\includegraphics{HuskyIcon_OneColor_Black.png}}}}
+\logo{\adjustbox{valign=c}{\resizebox*{!}{4ex}{
+	\includegraphics{HuskyIcon_OneColor_Black.png}}}}
 ```
